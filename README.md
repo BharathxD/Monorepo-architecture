@@ -1,4 +1,4 @@
-# Turborepo starter
+# Monorepo arechitecture using Turborepo
 
 This is an official starter Turborepo.
 
