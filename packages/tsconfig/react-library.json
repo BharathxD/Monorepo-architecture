@@ -3,10 +3,11 @@
   "display": "React Library",
   "extends": "./base.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "lib": ["ES2015", "DOM"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "ESNext",
     "target": "ESNext",
-    "noEmit": true
-  }
+    "jsx": "react-jsx"
+  },
+  "include": [".", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+  "exclude": ["dist", "build", "node_modules"]
 }

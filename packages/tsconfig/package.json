@@ -1,11 +1,14 @@
 {
   "name": "tsconfig",
+  "sideEffects": false,
   "version": "0.0.0",
   "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
+  "main": "index.js",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ],
   "devDependencies": {
     "tsconfig-paths": "^4.2.0"
   }
