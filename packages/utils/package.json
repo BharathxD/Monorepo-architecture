@@ -1,0 +1,35 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.mts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src/",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "next": "^13.4.19",
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^1.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "@types/react": "^18.2.29",
+    "next": "^13.4.19",
+    "tsconfig": "workspace:*",
+    "eslint-config": "workspace:*",
+    "react": "^18.2.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}

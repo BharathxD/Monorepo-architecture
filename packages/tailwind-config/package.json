@@ -4,9 +4,6 @@
   "description": "Tailwindcss config",
   "main": "index.ts",
   "types": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
