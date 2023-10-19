@@ -2,7 +2,7 @@ import {Button} from "ui";
 
 const Page = () => {
   return (
-    <main className="bg-red-500 h-80">
+    <main>
       The Monorepo Architecture Boilerplate
       <Button />
     </main>

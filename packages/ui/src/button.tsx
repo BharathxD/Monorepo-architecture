@@ -1,5 +1,5 @@
 const Button = () => {
-  return <button>Button from UI Package</button>;
+  return <button className="text-green-500">Button from UI Package</button>;
 };
 
-export { Button};
+export { Button };

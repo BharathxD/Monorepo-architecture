@@ -17,7 +17,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={cn(inter.className,"")}>{children}</body>
+      <body className={cn(inter.className,"min-h-screen")}>{children}</body>
     </html>
   );
 }
