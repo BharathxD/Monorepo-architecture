@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "sideEffects": false,
-  "main": "dist/index.js",
-  "types": "dist/index.d.mts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "build": "tsup",
-    "lint": "eslint src/",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
     "check-types": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "peerDependencies": {
     "next": "^13.4.19",
     "react": "^18.2.0"
