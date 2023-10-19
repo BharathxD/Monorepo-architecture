@@ -1,15 +1,12 @@
-/* eslint-disable */
-
+import forms from "@tailwindcss/forms"
+import typography from "@tailwindcss/typography"
+import twcssAnimate from "tailwindcss-animate"
+import tailwindScrollbar from "tailwind-scrollbar"
 import { type Config } from "tailwindcss";
 
-export default {
+const config: Config = {
     darkMode: ["class"],
-    content: [
-        "./pages/**/*.{ts,tsx}",
-        "./components/**/*.{ts,tsx}",
-        "./app/**/*.{ts,tsx}",
-        "./src/**/*.{ts,tsx}",
-    ],
+    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
     theme: {
         container: {
             center: true,
@@ -83,12 +80,7 @@ export default {
             },
         },
     },
-    plugins: [
-        require("@tailwindcss/forms"),
-        require("@tailwindcss/typography"),
-        require("@tailwindcss/typography"),
-        require("@savvywombat/tailwindcss-grid-areas"),
-        require("tailwindcss-animate"),
-        require("tailwind-scrollbar")({ nocompatible: true }),
-    ],
+    plugins: [forms, typography, twcssAnimate, tailwindScrollbar],
 } satisfies Config;
+
+export default config;
