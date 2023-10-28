@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@monorepo/ui",
   "version": "0.0.0",
   "sideEffects": false,
   "main": "./src/index.tsx",
@@ -12,6 +12,17 @@
     "lint": "eslint \"**/*.ts*\"",
     "ui:add": "pnpm dlx shadcn-ui@latest add"
   },
+  "dependencies": {
+    "@monorepo/utils": "workspace:*",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.288.0",
+    "sonner": "^1.0.3",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
   "devDependencies": {
     "@turbo/gen": "^1.10.12",
     "@types/node": "^20.5.2",
@@ -23,19 +34,8 @@
     "react": "^18.2.0",
     "tailwindcss": "^3.3.3",
     "typescript": "^4.9.5",
-    "tsconfig": "workspace:*",
-    "eslint-config": "workspace:*",
-    "tailwind-config": "workspace:*"
-  },
-  "dependencies": {
-    "@monorepo/utils": "workspace:*",
-    "@radix-ui/react-icons": "^1.3.0",
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "lucide-react": "^0.288.0",
-    "sonner": "^1.0.3",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "@monorepo/tsconfig": "workspace:*",
+    "@monorepo/eslint-config": "workspace:*",
+    "@monorepo/tailwind-config": "workspace:*"
   }
 }

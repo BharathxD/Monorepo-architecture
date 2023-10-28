@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "@monorepo/ui";
 
 const Page = () => {
   return (
