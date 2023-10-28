@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:packages/tailwind-config
       '@monorepo/tsconfig':
         specifier: workspace:*
         version: link:packages/tsconfig
@@ -20,12 +17,6 @@ importers:
       prettier:
         specifier: ^3.0.3
         version: 3.0.3
-      prettier-plugin-organize-imports:
-        specifier: ^3.2.3
-        version: 3.2.3(prettier@3.0.3)(typescript@4.9.5)
-      prettier-plugin-tailwindcss:
-        specifier: ^0.5.6
-        version: 0.5.6(prettier-plugin-organize-imports@3.2.3)(prettier@3.0.3)
       turbo:
         specifier: latest
         version: 1.10.16
@@ -85,12 +76,12 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@monorepo/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@monorepo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
       '@monorepo/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -118,6 +109,34 @@ importers:
       typescript:
         specifier: ^4.5.3
         version: 4.9.5
+
+  packages/config:
+    dependencies:
+      '@savvywombat/tailwindcss-grid-areas':
+        specifier: ^3.1.0
+        version: 3.1.0(tailwindcss@3.3.3)
+      '@tailwindcss/forms':
+        specifier: ^0.5.6
+        version: 0.5.6(tailwindcss@3.3.3)
+      '@tailwindcss/typography':
+        specifier: ^0.5.10
+        version: 0.5.10(tailwindcss@3.3.3)
+      tailwind-scrollbar:
+        specifier: ^3.0.5
+        version: 3.0.5(tailwindcss@3.3.3)
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.3.3)
+    devDependencies:
+      prettier:
+        specifier: ^2.8.6
+        version: 2.8.6
+      prettier-plugin-tailwindcss:
+        specifier: ^0.2.5
+        version: 0.2.5(prettier@2.8.6)
+      tailwindcss:
+        specifier: ^3.3.3
+        version: 3.3.3
 
   packages/eslint-config:
     devDependencies:
@@ -148,28 +167,6 @@ importers:
       typescript:
         specifier: ^4.5.3
         version: 4.9.5
-
-  packages/tailwind-config:
-    dependencies:
-      '@savvywombat/tailwindcss-grid-areas':
-        specifier: ^3.1.0
-        version: 3.1.0(tailwindcss@3.3.3)
-      '@tailwindcss/forms':
-        specifier: ^0.5.6
-        version: 0.5.6(tailwindcss@3.3.3)
-      '@tailwindcss/typography':
-        specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@3.3.3)
-      tailwind-scrollbar:
-        specifier: ^3.0.5
-        version: 3.0.5(tailwindcss@3.3.3)
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.3.3)
-    devDependencies:
-      tailwindcss:
-        specifier: ^3.3.3
-        version: 3.3.3
 
   packages/tsconfig:
     devDependencies:
@@ -207,12 +204,12 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.3.3)
     devDependencies:
+      '@monorepo/config':
+        specifier: workspace:*
+        version: link:../config
       '@monorepo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../tailwind-config
       '@monorepo/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -4375,23 +4372,6 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-organize-imports@3.2.3(prettier@3.0.3)(typescript@4.9.5):
-    resolution: {integrity: sha512-KFvk8C/zGyvUaE3RvxN2MhCLwzV6OBbFSkwZ2OamCrs9ZY4i5L77jQ/w4UmUr+lqX8qbaqVq6bZZkApn+IgJSg==}
-    peerDependencies:
-      '@volar/vue-language-plugin-pug': ^1.0.4
-      '@volar/vue-typescript': ^1.0.4
-      prettier: '>=2.0'
-      typescript: '>=2.9'
-    peerDependenciesMeta:
-      '@volar/vue-language-plugin-pug':
-        optional: true
-      '@volar/vue-typescript':
-        optional: true
-    dependencies:
-      prettier: 3.0.3
-      typescript: 4.9.5
-    dev: true
-
   /prettier-plugin-packagejson@2.4.5(prettier@3.0.3):
     resolution: {integrity: sha512-glG71jE1gO3y5+JNAhC8X+4yrlN28rub6Aj461SKbaPie9RgMiHKcInH2Moi2VGOfkTXaEHBhg4uVMBqa+kBUA==}
     peerDependencies:
@@ -4405,21 +4385,21 @@ packages:
       synckit: 0.8.5
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.6(prettier-plugin-organize-imports@3.2.3)(prettier@3.0.3):
-    resolution: {integrity: sha512-2Xgb+GQlkPAUCFi3sV+NOYcSI5XgduvDBL2Zt/hwJudeKXkyvRS65c38SB0yb9UB40+1rL83I6m0RtlOQ8eHdg==}
-    engines: {node: '>=14.21.3'}
+  /prettier-plugin-tailwindcss@0.2.5(prettier@2.8.6):
+    resolution: {integrity: sha512-vZ/iKieyCx0WTxHbkf5E1rBlv/ybFk8WTT4hL5W2jlVxum2Zbe0jMUpuQdDrpa4z2vnPiJ5KIWCqL/kd16fKYg==}
+    engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-php': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
-      prettier: ^3.0
+      prettier: '>=2.2.0'
       prettier-plugin-astro: '*'
       prettier-plugin-css-order: '*'
       prettier-plugin-import-sort: '*'
       prettier-plugin-jsdoc: '*'
-      prettier-plugin-marko: '*'
       prettier-plugin-organize-attributes: '*'
       prettier-plugin-organize-imports: '*'
       prettier-plugin-style-order: '*'
@@ -4427,6 +4407,8 @@ packages:
       prettier-plugin-twig-melody: '*'
     peerDependenciesMeta:
       '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-php':
         optional: true
       '@prettier/plugin-pug':
         optional: true
@@ -4444,8 +4426,6 @@ packages:
         optional: true
       prettier-plugin-jsdoc:
         optional: true
-      prettier-plugin-marko:
-        optional: true
       prettier-plugin-organize-attributes:
         optional: true
       prettier-plugin-organize-imports:
@@ -4457,8 +4437,13 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 3.0.3
-      prettier-plugin-organize-imports: 3.2.3(prettier@3.0.3)(typescript@4.9.5)
+      prettier: 2.8.6
+    dev: true
+
+  /prettier@2.8.6:
+    resolution: {integrity: sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /prettier@3.0.3:
