@@ -15,3 +15,9 @@ Installing node modules
 ```bash
 pnpm add <name> --filter <package>
 ```
+
+Removing node modules
+
+```bash
+pnpm remove <name> --filter <package>
+```
