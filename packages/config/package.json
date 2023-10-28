@@ -17,8 +17,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
+    "prettier-plugin-tailwindcss": "^0.2.5",
     "prettier": "^2.8.6",
-    "prettier-plugin-tailwindcss": "^0.2.5"
+    "tailwindcss": "^3.3.3"
   }
 }

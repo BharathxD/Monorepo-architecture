@@ -17,7 +17,12 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        default: ["var(--font-poppins)", "sans-serif"],
+        default: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-clash)"],
+      },
+      backgroundImage: {
+        "gradient-top-bottom":
+        "radial-gradient(circle at top right,#94a3b8,#fff 42%,#0000 0),radial-gradient(circle at bottom left,#94a3b8,#fff 42%,#0000 0)",
       },
       colors: {
         border: "hsl(var(--border))",
