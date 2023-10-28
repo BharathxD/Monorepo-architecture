@@ -9,3 +9,9 @@ Command add Shad/CN UI components:
 ```bash
 pnpm --filter ui ui:add <name>
 ```
+
+Installing node modules
+
+```bash
+pnpm add <name> --filter <package>
+```
