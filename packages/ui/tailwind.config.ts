@@ -1,4 +1,3 @@
-// tailwind config is required for editor support
 import sharedConfig from "tailwind-config/tailwind.config";
 import type { Config } from "tailwindcss";
 

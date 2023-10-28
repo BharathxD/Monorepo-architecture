@@ -1,12 +1,12 @@
-import {Button} from "ui";
+import { Button } from "ui";
 
 const Page = () => {
   return (
     <main>
       The Monorepo Architecture Boilerplate
-      <Button />
+      <Button>Submit</Button>
     </main>
   );
-}
+};
 
 export default Page;

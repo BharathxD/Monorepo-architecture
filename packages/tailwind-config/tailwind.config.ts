@@ -16,12 +16,7 @@ const config: Config = {
             },
         },
         extend: {
-            backgroundImage: {
-                "gradient-top-bottom":
-                    "radial-gradient(circle at top right,#b2b3f1,#fff 42%,#0000 0),radial-gradient(circle at bottom left,#b2b3f1,#fff 42%,#0000 0)",
-            },
             fontFamily: {
-                display: ["var(--font-clash)"],
                 default: ["var(--font-poppins)", "sans-serif"],
             },
             colors: {
