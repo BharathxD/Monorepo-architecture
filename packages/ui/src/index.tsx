@@ -2,4 +2,4 @@
 import "./styles.css";
 
 // ui
-export * from "./ui/button"
+export * from "./ui/button";

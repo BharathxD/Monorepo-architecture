@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import { cn } from "@monorepo/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { cn } from "@monorepo/utils"
+import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={cn(inter.className,"min-h-screen")}>{children}</body>
+      <body className={cn(inter.className, "min-h-screen")}>{children}</body>
     </html>
   );
 }
