@@ -9,10 +9,11 @@
     "ui:add": "pnpm --filter ui ui:add"
   },
   "devDependencies": {
+    "@monorepo/tsconfig": "workspace:*",
+    "@total-typescript/ts-reset": "^0.5.1",
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
-    "turbo": "latest",
-    "@monorepo/tsconfig": "workspace:*"
+    "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10"
 }
